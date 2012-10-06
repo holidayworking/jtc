@@ -1,0 +1,60 @@
+- # -*- coding: utf-8 -*-
+!!!
+%html
+  %head
+    %meta{:charset => 'utf-8'}
+    %title Jubatus Text Classifier
+    %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1.0'}
+    %link{:href => '/stylesheets/bootstrap.css', :rel => 'stylesheet'}
+    / Le HTML5 shim, for IE6-8 support of HTML elements
+    /[if lt IE 9]
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    / Le styles
+    :css
+      body {
+        padding-top: 60px;
+      }
+    %script{:src => 'https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'}
+    %script{:src => '/javascripts/classify.js'}
+  %body
+    .navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.btn.btn-navbar{ 'data-toggle'.to_sym => 'collapse', 'data-target'.to_sym => '.nav-collapse'}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.brand{:href => '/'} Jubatus Text Classifier
+          .nav-collapse.collapse
+            %ul.nav
+              %li.active
+                %a{:href => '/'} Home
+    .container
+      %h1 Jubatus Text Classifier とは？
+      %p
+        オンライン機械学習向け分散処理フレームワークである
+        %a{:href => 'http://jubat.us'} Jubatus
+        で実装したテキスト分類器です。
+      %p
+        学習データとしては
+        %a{:href => 'http://www.asahi.com'} 朝日新聞
+        の記事を使っており、下記のカテゴリに分類されます。
+        %uk
+          %li 社会
+          %li 政治
+          %li スポーツ
+          %li 経済
+          %li 国際
+          %li サイエンス
+      %h1 使い方
+      %p テキストエリアに任意の文章を入力して、分類ボタンを押すだけです。
+      %form#demo{:method => 'get'}
+        %textarea{:name => 'query', :rows => '10', :style => 'width: 100%'}
+        %button{:type => 'submit'} 分類
+      #result
+    %hr
+    %footer
+      .container
+        %p.pull-right
+          developed by
+          %a{:href => 'http://about.me/holidayworking'} holidayworking
