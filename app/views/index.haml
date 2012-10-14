@@ -5,7 +5,7 @@
     %meta{:charset => 'utf-8'}
     %title Jubatus Text Classifier
     %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1.0'}
-    %link{:href => '/stylesheets/bootstrap.css', :rel => 'stylesheet'}
+    =stylesheet_link_tag 'bootstrap'
     / Le HTML5 shim, for IE6-8 support of HTML elements
     /[if lt IE 9]
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -15,7 +15,7 @@
         padding-top: 60px;
       }
     %script{:src => 'https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'}
-    %script{:src => '/javascripts/classify.js'}
+    =javascript_include_tag 'classify'
   %body
     .navbar.navbar-inverse.navbar-fixed-top
       .navbar-inner

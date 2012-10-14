@@ -3,7 +3,7 @@ $ ->
     $('#result').empty()
 
     query = $('#demo [name=query]').val()
-    $.get "/api/classify?query=#{query}", (data) ->
+    $.get "#{location.href}/api/classify?query=#{query}", (data) ->
       answers = data.sort((a, b) ->
         b[1] - a[1]
       )
