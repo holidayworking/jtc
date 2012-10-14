@@ -10,7 +10,7 @@ FEED = {
 }
 
 JUBATUS = {
-  :host       => 'ubuntu.holidayworking.org',
+  :host       => 'localhost',
   :port       => 9199,
   :name       => 'jtc',
   :algorithm  => 'PA'
